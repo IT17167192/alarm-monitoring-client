@@ -6,17 +6,15 @@ class Sensor extends Component {
         super(props);
         let co2RGBColor = "rgba(98,  182, 239,0.4)";
         let smokeRGBColor = "rgba(98,  182, 239,0.4)";
-        let labelMessage = 'normal';
 
         if (props.smokeLevel > 5){
             smokeRGBColor = "rgba(255, 134,159,0.4)";
-            labelMessage = 'Alert';
         }
 
         if(props.co2Level > 5){
             co2RGBColor = "rgba(255, 134,159,0.4)";
-            labelMessage = 'Alert';
         }
+
         this.state = {
             id: props.id,
             roomNo: props.roomNo,
@@ -25,7 +23,6 @@ class Sensor extends Component {
             chartData: {
                 labels: ["Smoke Level", "CO2 Level"],
                 datasets: [{
-                    label: labelMessage,
                     data: [props.smokeLevel, props.co2Level],
                     backgroundColor: [
                         smokeRGBColor,
@@ -39,16 +36,13 @@ class Sensor extends Component {
     componentWillReceiveProps(nextProps) {
         let co2RGBColor = "rgba(98,  182, 239,0.4)";
         let smokeRGBColor = "rgba(98,  182, 239,0.4)";
-        let labelMessage = 'normal';
 
         if (nextProps.smokeLevel > 5){
             smokeRGBColor = "rgba(255, 134,159,0.4)";
-            labelMessage = 'Alert';
         }
 
         if(nextProps.co2Level > 5){
             co2RGBColor = "rgba(255, 134,159,0.4)";
-            labelMessage = 'Alert';
         }
 
         this.setState({
@@ -59,7 +53,6 @@ class Sensor extends Component {
             chartData: {
                 labels: ["Smoke Level", "CO2 Level"],
                 datasets: [{
-                    label: labelMessage,
                     data: [nextProps.smokeLevel, nextProps.co2Level],
                     backgroundColor: [
                         smokeRGBColor,
@@ -83,6 +76,9 @@ class Sensor extends Component {
                     <Bar
                         data={this.state.chartData}
                         options={{
+                            legend: {
+                                display: false
+                            },
                             scales: {
                                 xAxes: [
                                     {
