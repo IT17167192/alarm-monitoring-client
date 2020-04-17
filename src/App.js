@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
         <br/>
-      <Navbar/>
-      <br/>
-      <SensorAppMain/>
+        <Navbar/>
+        <br/>
+        <SensorAppMain/>
     </div>
   );
 }
