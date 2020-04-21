@@ -45,8 +45,6 @@ class SensorAppMain extends Component {
                                 sensors.map((sensor, i) => {
                                     if(i%2 === 0){
                                         return (
-                                            // <Sensor id={sensor.id} status={sensor.status} co2Level={sensor.co2Level}
-                                            //         floorNo={sensor.floorNo} roomNo={sensor.roomNo} smokeLevel={sensor.smokeLevel} key={sensor.id}/>
                                             <Sensor id={sensor.id} status={sensor.status} co2Level={sensor.co2Level}
                                                                floorNo={sensor.floorNo} roomNo={sensor.roomNo} smokeLevel={sensor.smokeLevel} key={sensor.id}/>
                                         );
@@ -59,8 +57,6 @@ class SensorAppMain extends Component {
                                 sensors.map((sensor, i) => {
                                     if(i%2 === 1){
                                         return (
-                                            // <Sensor id={sensor.id} status={sensor.status} co2Level={sensor.co2Level}
-                                            //         floorNo={sensor.floorNo} roomNo={sensor.roomNo} smokeLevel={sensor.smokeLevel} key={sensor.id}/>
                                             <Sensor id={sensor.id} status={sensor.status} co2Level={sensor.co2Level}
                                                                floorNo={sensor.floorNo} roomNo={sensor.roomNo} smokeLevel={sensor.smokeLevel} key={sensor.id}/>
 
